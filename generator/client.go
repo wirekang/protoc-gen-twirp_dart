@@ -133,6 +133,7 @@ class Default{{.Name}} implements {{.Name}} {
 	}
 
     {{range .Methods}}
+	@override
 	Future<{{.OutputType}}>{{.Name}}({{.InputType}} {{.InputArg}}) async {
 		var url = "${hostname}${_pathPrefix}{{.Path}}";
 		var uri = Uri.parse(url);
