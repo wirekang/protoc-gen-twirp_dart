@@ -1,6 +1,7 @@
 # Differences from origin repo
 
 * Fix Non-nullable field error
+* UTF-8 support
 * Add go module
 * Warning less output by modern syntax
 
