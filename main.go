@@ -1,12 +1,13 @@
 package main
 
 import (
-	"github.com/apptreesoftware/protoc-gen-twirp_dart/generator"
-	"github.com/gogo/protobuf/protoc-gen-gogo/plugin"
 	"io"
 	"io/ioutil"
 	"os"
 	"strings"
+
+	plugin_go "github.com/gogo/protobuf/protoc-gen-gogo/plugin"
+	"github.com/wirekang/protoc-gen-twirp_dart/generator"
 
 	gogogen "github.com/gogo/protobuf/protoc-gen-gogo/generator"
 	"github.com/golang/protobuf/proto"
@@ -57,7 +58,7 @@ func generate(in *plugin_go.CodeGeneratorRequest) *plugin_go.CodeGeneratorRespon
 		resp.File = append(resp.File, cf)
 	}
 
-	//resp.File = append(resp.File, generator.RuntimeLibrary())
+	// resp.File = append(resp.File, generator.RuntimeLibrary())
 
 	return resp
 }
@@ -69,7 +70,6 @@ func writeResponse(w io.Writer, resp *plugin_go.CodeGeneratorResponse) {
 	}
 	_, err = w.Write(data)
 	if err != nil {
-
 	}
 }
 

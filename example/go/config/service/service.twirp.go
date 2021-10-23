@@ -10,25 +10,31 @@ It is generated from these files:
 */
 package config_service
 
-import bytes "bytes"
-import strings "strings"
-import context "context"
-import fmt "fmt"
-import ioutil "io/ioutil"
-import http "net/http"
+import (
+	bytes "bytes"
+	strings "strings"
+	context "context"
+	fmt "fmt"
+	ioutil "io/ioutil"
+	http "net/http"
+)
 
-import jsonpb "github.com/golang/protobuf/jsonpb"
-import proto "github.com/golang/protobuf/proto"
-import twirp "github.com/twitchtv/twirp"
-import ctxsetters "github.com/twitchtv/twirp/ctxsetters"
+import (
+	jsonpb "github.com/golang/protobuf/jsonpb"
+	proto "github.com/golang/protobuf/proto"
+	twirp "github.com/twitchtv/twirp"
+	ctxsetters "github.com/twitchtv/twirp/ctxsetters"
+)
 
-import config_model "github.com/apptreesoftware/protoc-gen-twirp_dart/example/go/config/model"
+import config_model "github.com/wirekang/protoc-gen-twirp_dart/example/go/config/model"
 
 // Imports only used by utility functions:
-import io "io"
-import strconv "strconv"
-import json "encoding/json"
-import url "net/url"
+import (
+	io "io"
+	strconv "strconv"
+	json "encoding/json"
+	url "net/url"
+)
 
 // =====================
 // Haberdasher Interface
@@ -742,6 +748,7 @@ func twirpErrorFromIntermediary(status int, msg string, bodyOrLocation string) t
 	}
 	return twerr
 }
+
 func isHTTPRedirect(status int) bool {
 	return status >= 300 && status <= 399
 }

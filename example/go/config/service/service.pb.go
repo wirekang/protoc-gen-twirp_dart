@@ -5,15 +5,18 @@ package config_service
 
 import (
 	fmt "fmt"
-	_ "github.com/apptreesoftware/protoc-gen-twirp_dart/example/go/config/model"
-	proto "github.com/golang/protobuf/proto"
 	math "math"
+
+	proto "github.com/golang/protobuf/proto"
+	_ "github.com/wirekang/protoc-gen-twirp_dart/example/go/config/model"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ = proto.Marshal
-var _ = fmt.Errorf
-var _ = math.Inf
+var (
+	_ = proto.Marshal
+	_ = fmt.Errorf
+	_ = math.Inf
+)
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the proto package it is being compiled against.
